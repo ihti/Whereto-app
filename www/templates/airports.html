@@ -1,0 +1,31 @@
+<ion-view view-title="Airports">
+	<ion-content>
+		<div>
+			<div class="list list-inset">
+			  <label class="item item-input">
+			    <i class="icon ion-search placeholder-icon"></i>
+			    <input type="text"
+					placeholder="Search airports"
+					ng-model="search.q">
+			  </label>
+			</div>
+
+			<div class="nearest">
+				<div class="or">OR</div>
+				<a href="#" ng-click="nearest()">
+					Show nearest airports
+				</a>
+			</div>
+		</div>
+		<div ng-show="airports">
+
+		</div>
+
+		<ion-list>
+			<ion-item class="item-remove-animate item-icon-right" ng-repeat="airport in airports" href="#/tab/airport/{{airport.id}}">
+				{{airport.city}}, <small>{{airport.country}}</small>
+				<p>Airport: {{airport.name}} ({{airport.iata}}) <br></p>
+				<p ng-if="airport.distance">Distance: {{airport.distance}}km</p>
+			</ion-item>
+	</ion-content>
+</ion-view>

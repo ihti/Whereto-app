@@ -1,0 +1,27 @@
+.route-item {
+	padding: 0px;
+}
+.route-item a {
+	color: rgb(68, 68, 68);
+	text-decoration: none;
+}
+.pull-right {
+	text-align: right;
+}
+.nearest {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.nearest .or {
+	color: rgb(188, 188, 188);
+	padding-bottom: 8px;
+}
+.nearest a {
+	color: rgb(68, 68, 68);
+	text-decoration: none;
+	font-weight: bold;
+}
+.fly-header {
+	color: #387ef5;
+	padding-left: 5px;
+}

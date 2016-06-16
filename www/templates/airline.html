@@ -1,0 +1,40 @@
+<ion-view view-title="Airline">
+	<ion-content>
+		<div class="card">
+			<div class="item item-divider">
+				{{airline.details.name}}
+			</div>
+			<div class="item item-text-wrap">
+				<p>
+					Country: {{airline.details.country}} <br>
+					IATA Code: {{airline.details.iata}} <br>
+				</p>
+			</div>
+		</div>
+
+		<div class="content padding">
+			<h3 class="fly-header">Routes</h3>
+		</div>
+
+		<ion-list>
+			<ion-item ng-repeat="route in airline.routes">
+				<div class="row route-item">
+				  <div class="col route-item">
+					  <a href="#/tab/airport/{{route.from_airport.id}}">
+					  {{route.from_airport.city}}<br>
+					  <small>{{route.from_airport.country}}</small>
+				  	  </a>
+				  </div>
+				  <div class="col route-item">
+					  <div class="pull-right">
+						  <a href="#/tab/airport/{{route.to_airport.id}}">
+	  					{{route.to_airport.city}}<br>
+	  					<small>{{route.to_airport.country}}</small>
+					</a>
+	  				</div>
+				  </div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

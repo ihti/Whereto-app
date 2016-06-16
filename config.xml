@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.whereto.Whereto" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Whereto</name>
+  <description>
+        Whereto app
+    </description>
+  <author email="jasminihtijarevic@gmail.com" href="http://rock-planet.com">
+    Jasmin Ihtijarevic
+  </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <platform name="android">
+    <icon src="icons/android/drawable-ldpi/ic_launcher.png" density="ldpi"/>
+    <icon src="icons/android/drawable-mdpi/ic_launcher.png" density="mdpi"/>
+    <icon src="icons/android/drawable-hdpi/ic_launcher.png" density="hdpi"/>
+    <icon src="icons/android/drawable-xhdpi/ic_launcher.png" density="xhdpi"/>
+    <icon src="icons/android/drawable-xxhdpi/ic_launcher.png" density="xhdpi"/>
+    <icon src="icons/android/drawable-xxxhdpi/ic_launcher.png" density="xhdpi"/>
+  </platform>
+</widget>

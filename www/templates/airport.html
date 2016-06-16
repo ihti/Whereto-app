@@ -1,0 +1,30 @@
+<ion-view view-title="Airport">
+	<ion-content>
+
+		<div class="card">
+			<div class="item item-divider">
+				{{airport.details.name}}
+			</div>
+			<div class="item item-text-wrap">
+				<p>
+					City: {{airport.details.city}}<br>
+					Country: {{airport.details.country}} <br>
+					IATA Code: {{airport.details.iata}} <br>
+					<!--Map: <a href="#" onlick="window.open('http://maps.google.com/maps?q={{airport.details.lat}},{{airport.details.long}}', '_blank', 'location=yes'); return false;">Open Google map</a>-->
+				</p>
+			</div>
+		</div>
+		<div class="content padding">
+			<h4 class="fly-header">Fly from {{airport.details.city}} to:</h4>
+		</div>
+		<ion-list>
+			<ion-item ng-repeat="route in airport.routes" href="#/tab/airport/{{route.to_airport_id}}">
+				{{airport.airports[route.to_airport_id].city}}, <small>{{airport.airports[route.to_airport_id].country}}</small><br>
+				 <p>
+					Airport: {{airport.airports[route.to_airport_id].name}} ({{route.to_airport}}) <br>
+					Airline: {{route.airline}}
+				</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
